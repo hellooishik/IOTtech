@@ -21,6 +21,19 @@
 			<div class="site-branding">
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">Aspiring Minds</a></h1>
 			</div>
+			
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">☰</button>
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'fallback_cb'    => false,
+					)
+				);
+				?>
+			</nav>
 		</div>
 	</header>
 	<main id="primary" class="site-main">
