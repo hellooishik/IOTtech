@@ -157,10 +157,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Teaching Areas Grid */
-.grid-container {
+.grid-container,
+.wp-block-group.grid-container > .wp-block-group__inner-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 2rem;
+	width: 100%;
 }
 
 .grid-item {
@@ -231,12 +233,14 @@ h1, h2, h3, h4, h5, h6 {
 	padding-bottom: 6rem;
 }
 
-.benefits-grid {
+.benefits-grid,
+.wp-block-group.benefits-grid > .wp-block-group__inner-container {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 	gap: 1.5rem;
 	max-width: 1000px;
 	margin: 0 auto;
+	width: 100%;
 }
 
 .benefit-item.pill {
