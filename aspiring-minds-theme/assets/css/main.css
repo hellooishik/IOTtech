@@ -203,13 +203,27 @@ h1, h2, h3, h4, h5, h6 {
 	z-index: 1;
 }
 
-.grid-item h3 span {
+.grid-item h3 span,
+.grid-item p.subtitle {
 	display: block;
 	font-size: 0.9rem;
 	font-weight: 400;
 	color: var(--accent-cyan);
 	margin-top: 0.5rem;
 	font-family: var(--font-primary);
+}
+
+/* Gutenberg block support */
+.wp-block-cover.grid-item {
+	padding: 0;
+}
+.wp-block-cover.grid-item .wp-block-cover__inner-container {
+	padding: 3rem 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 
 /* Benefits Section */
@@ -253,6 +267,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 600;
 	margin: 0;
 	font-family: var(--font-heading);
+}
+
+/* Gutenberg support for benefit item */
+.wp-block-group.benefit-item.pill {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
 }
 
 /* Footer */
